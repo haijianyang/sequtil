@@ -1,0 +1,9 @@
+node_modules
+*.log
+log
+.vscode
+.DS_Store
+playground.js
+.nyc_output
+coverage
+test.js

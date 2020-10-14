@@ -1,0 +1,60 @@
+{
+  "name": "sequtil",
+  "version": "1.0.8",
+  "description": "RESTful API Filter and Pagination and Sort, Sequelize Where and Limit and Offset and Order",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test npm run lint && mocha --exit",
+    "test:cover": "NODE_ENV=test nyc --reporter=text --reporter=lcov npm run test",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haijianyang/sequtil.git"
+  },
+  "keywords": [
+    "restful",
+    "api",
+    "filter",
+    "pagination",
+    "sort",
+    "sequelize",
+    "where",
+    "limit",
+    "offset",
+    "order"
+  ],
+  "author": "haijianyang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haijianyang/sequtil/issues"
+  },
+  "homepage": "https://github.com/haijianyang/sequtil#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm test",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "cz-conventional-changelog": "^3.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "husky": "^4.2.3",
+    "mocha": "^7.1.1",
+    "nyc": "^15.0.0",
+    "power-assert": "^1.6.1",
+    "sinon": "^9.0.1"
+  },
+  "dependencies": {
+    "sequelize": "^5.21.5"
+  }
+}
